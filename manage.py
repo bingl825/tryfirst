@@ -1,6 +1,6 @@
 from flask_script import Manager,Server
 from flask_migrate import Migrate,MigrateCommand
-from main import app,db,User
+from main import app,db,User,Diary,Project
 
 
 
@@ -12,8 +12,9 @@ manager.add_command("db",MigrateCommand)
 
 @manager.shell
 def make_shell_contet():
-    return dict(app = app, db = db, User = User)
+    return dict(app = app, db = db, User = User, Diary = Diary, Project = Project)
 
 if __name__ == "__main__":
     manager.run()
+
 
