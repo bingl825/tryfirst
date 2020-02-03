@@ -57,8 +57,8 @@ def home():
 def home_in():
     username = request.form['username']
     password = request.form['password']
-  # 这里有一个空值判断strip()
-    if username.strip():
+  # 这里判定方法不对
+    if username != '':
         check = User.query.filter(User.username == username).first()
         return render_template('home.html',check = check.username)
     else:
