@@ -5,9 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-{% for a in list_name %}
-    <li><a>{{ a.id }}     {{ a.username }}     {{ a.password }}</a></li>
+{{ msg }}
 
+ <form action="/" method="post">
+     {{check}}
+    <legend>Please sign in:</legend>
+    <p><input name="username" placeholder="Username" value="{{ username }}"></p>
+    <p><input name="password" placeholder="Password" type="password"></p>
+    <p><button type="submit">Sign In</button></p>
+  </form>
 
-{% endfor %}
 </html>
