@@ -47,10 +47,6 @@ class Diary(db.Model):
 
 
 
-def list_name():
-    res = User.query.all()
-    list_name = res
-    return list_name
 
 @app.route('/', methods = ['GET'])
 def home():
