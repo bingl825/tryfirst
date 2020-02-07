@@ -4,6 +4,8 @@ from main import app,db,User,Diary,Project,ProjUser
 
 
 
+
+
 manager = Manager(app)
 migrate = Migrate(app,db)
 
