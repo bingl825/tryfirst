@@ -98,7 +98,7 @@ def index():
 def login():
     form = LoginForm()
     if request.method == 'GET':
-        return render_template('login.html', form=form, msg=msg)
+        return render_template('login.html', form=form)
 
     if request.method == 'POST':
         user = User.query.filter_by(username=form.username.data).first()
